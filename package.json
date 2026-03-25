@@ -2,10 +2,10 @@
   "name": "api-devops",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
    "run" : "node app.js",
-   "test" : "node test.js ",
+   "test" : "node test.js "},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anish013326/API-Devops.git"
