@@ -1,24 +1,24 @@
-name:cicd pipeline
+name: cicd pipeline
 
 on:
   push:
     branches: [main]
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: checkout code
-      user: actions/checkout@v5
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: set up Node.js  
-      user: actions/checkout@v3
-      with: 
-            node-version: 16
-    - name: install dependencies
-      run: npm install 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16
 
-    - name: Run tests
-      run: npm test 
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
