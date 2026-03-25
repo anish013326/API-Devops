@@ -1,5 +1,14 @@
-console.log("starting test");
+console.log("Running test...");
 
-setTimeout(() => console.log("waiting 3 seconds"), 3000);
+// simple deterministic test
+function sum(a, b) {
+  return a + b;
+}
 
-console.log("test complete");
+if (sum(2, 2) !== 4) {
+  console.error("Test failed ❌");
+  process.exit(1);
+}
+
+console.log("Test passed ✅");
+process.exit(0);
